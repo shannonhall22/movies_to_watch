@@ -25,16 +25,4 @@ Next, to save you the trouble of adding a bunch of rows through `rails console`,
 
 This will auto-prepopulate a bunch of rows for you so that we can get down to work.
 
-Your job: make the following URLs work
-
-### Index of all
-
- - http://localhost:3000/movies
- - http://localhost:3000/actors
- - http://localhost:3000/directors
-
-### Show individual details:
-
- - http://localhost:3000/movies/15
- - http://localhost:3000/actors/15
- - http://localhost:3000/directors/15
+Your job: Create the Golden Seven actions for `movies`, `actors` and `directors`. Definitely use an existing application that you've built for notes, but avoid checking it until you've tried to write the code on your own.
