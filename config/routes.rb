@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
   #Create
-  get( ,:controller => "movies", :action => "new_form")
-  post( ,:controller => "movies", :action => "create_row")
+  get("/movies/new",:controller => "movies", :action => "new_form", :as => "new_movie")
+  post("/movies",:controller => "movies", :action => "create_row", :as => "movies")
 
   #Read
-  get( ,:controller => "movies", :action => "show")
-  get( ,:controller => "movies", :action => "index")
+  get("/movies/:id",:controller => "movies", :action => "show", :as => "movie")
+  get("/movies",:controller => "movies", :action => "index")
 
   #Edit
-  get( ,:controller => "movies", :action => "edit_form")
-  patch( ,:controller => "movies", :action => "update_row")
+  get("/movies/:id/edit",:controller => "movies", :action => "edit_form", :as => "edit_movie")
+  patch("/movies/:id",:controller => "movies", :action => "update_row")
 
   #Destroy
-  delete( ,:controller => "movies", :action => "destroy")
+  delete("/movies/:id",:controller => "movies", :action => "destroy")
 
 end
