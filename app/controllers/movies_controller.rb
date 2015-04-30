@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
     @movie.image_url = params["the_image_url"]
 
     @movie.save
+
+    redirect_to "/movies"
   end
 
   def create_row
@@ -25,6 +27,8 @@ class MoviesController < ApplicationController
     @movie.image_url = params["the_image_url"]
 
     @movie.save
+
+    redirect_to "/movies"
   end
 
   def new_form
@@ -32,7 +36,7 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    @movie = Movie.all
   end
 
   def show
@@ -43,6 +47,8 @@ class MoviesController < ApplicationController
     @movie = Movie.find_by({ :id => params["id"] })
 
     @movie.destroy
+
+    redirect_to "/movies"
   end
 
 end

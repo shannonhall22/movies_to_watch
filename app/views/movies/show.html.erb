@@ -1,0 +1,19 @@
+<h1><%= @movie.title %></h1>
+
+<img src="<%= @movie.image_url %>">
+
+<h3><%= @movie.year %>, <%= @movie.duration %> min.</h3>
+<h4><%= @movie.description %></h4>
+
+
+  <%= link_to movies_url do%>
+    Index |
+  <% end %>
+  <%= link_to edit_movie_url(@movie.id) do%>
+    Edit |
+  <% end %>
+  <%= link_to movie_url(@movie.id), :method => :delete do%>
+    Delete
+  <% end %>
+
+
