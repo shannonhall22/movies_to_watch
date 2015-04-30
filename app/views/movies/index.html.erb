@@ -1,8 +1,12 @@
+<%= link_to new_movie_url do%>
+  Add new movie
+<% end %>
+
 <%= @movie.each do |movies| %>
 
   <h1><%= movies.title %></h1>
 
-  <img src="<%= movies.image_url %>">
+  <%= image_tag movies.image_url, :class => "img-responsive" %>
 
   <h3><%= movies.year %>, <%= movies.duration %> min.</h3>
   <h4><%= movies.description %></h4>

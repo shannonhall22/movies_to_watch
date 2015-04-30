@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
 
     @movie.save
 
-    redirect_to "/movies"
+  redirect_to "/movies/#{@movie.id}"
   end
 
   def create_row
@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
 
     @movie.save
 
-    redirect_to "/movies"
+    redirect_to "/movies/#{@movie.id}"
   end
 
   def new_form
